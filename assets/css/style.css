@@ -98,6 +98,9 @@ textarea {
 /* STYLES FOR INPUT*/
 .event{
   border-bottom: 2px solid gainsboro;
+  display: flex;
+  flex-flow: row wrap;
+  padding: 0px;
 }
 
 .schedule input[type="text"]{
