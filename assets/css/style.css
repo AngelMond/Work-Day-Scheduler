@@ -70,37 +70,66 @@ textarea {
   transition: all 0.3s ease-in-out;
 }
 
-.schedule{
-  background-color: red;
+/* SCHEDULE CONTAINER */
+.schedulesContainer{
+  width: 80%;
+  margin: 0px;
+  padding: 0px;
+  margin: 0 auto;
 }
 
-
-.schedulesContainer{
-  width: 100%;
-  margin: 0px;
+/* STYLES FOR TIME */
+.time{
+  height: 100%;
+  line-height: 80px;
+  border-right: 5px solid #2c81cb;
+  border-top: 2px solid #255761;
   padding: 0px;
 }
 
+.lastTime{
+  border-bottom: 2px solid #255761 ;
+}
+
+/* STYLES FOR INPUT*/
 .event{
   border-bottom: 2px solid gainsboro;
 }
 
-.time{
-  height: 100%;
-}
-
 .schedule input[type="text"]{
   height: 100%;
-  background-color: gray;
+  background-color: #10AECC;
   outline: none;
   border: none;
   border: 2px 0px;
-  border-radius: 5px;
+  color: white;
 }
 
 .schedule input[type="text"]:hover{
   cursor: pointer;
   border-bottom: 1px solid red;
+}
+
+::placeholder{
+  color: white;
+}
+
+/*STYLES FOR SAVE EVENT*/
+.saveEvent{
+  background-color: #FA872D ;
+  border-radius: 5px;
+  text-align: left;
+  border-left: 5px solid #F0D92B;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.saveImage{
+  width: 30px;
+  height: 30px;
+  border-radius: 10px;
 }
 
 
