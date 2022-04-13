@@ -2,10 +2,10 @@
 //Container to display today's date
 var actualTime = $('#actualTime');
 
-//Select my input to enter an event
+//Input to enter an event
 var scheduleAnEvent = $('.enterEvent');
 
-//Select my image to save my event
+//Image to click and save my event
 var saveEvent = $('.saveImage');
 
 
@@ -27,10 +27,13 @@ function eventHandler(){
     localStorage.getItem('eventSchedule', event);
 }
 
-saveEvent.on('click', function clickEventHandler(event){
-    event.preventDefault();
+var clickEventHandler = function (event){
+    event.target.getAttribute('save-data');
+}
 
+//Click on image to save event
+saveEvent.on('click', function (){
     eventHandler();
-    
+    clickEventHandler();
 })
 
