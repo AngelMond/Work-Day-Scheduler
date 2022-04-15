@@ -91,7 +91,7 @@ img10.on('click', function (event){
 })
 
 
-//VARIBLES TO GET THE USERS INPUT
+//VARIBLES TO GET THE USERS INPUT VALUE FROM LOCALSTORAGE
 var getEvent1 = localStorage.getItem('eventSchedule1');
 var getEvent2 = localStorage.getItem('eventSchedule2');
 var getEvent3 = localStorage.getItem('eventSchedule3');
@@ -103,7 +103,7 @@ var getEvent8 = localStorage.getItem('eventSchedule8');
 var getEvent9 = localStorage.getItem('eventSchedule9');
 var getEvent10 = localStorage.getItem('eventSchedule10');
 
-/************  FUNCTIONS TO STORE THE USERS INPUT   **************** */
+/************  FUNCTIONS TO STORE THE USERS INPUT AND SET TO LOCALSTORAGE  **************** */
 function eventDataHandler1(){
     localStorage.setItem('eventSchedule1', saveEvent1.val());
 }
@@ -144,7 +144,7 @@ function eventDataHandler10(){
     localStorage.setItem('eventSchedule10', saveEvent10.val());
 }
 
-//GET USERS INPUT
+//USED LOCALSTORAGE GETITEM TO STORAGE THE EVENT ON THE WEB
 saveEvent1.val(getEvent1);
 saveEvent2.val(getEvent2);
 saveEvent3.val(getEvent3);
