@@ -131,6 +131,11 @@ textarea {
   flex-flow: row wrap;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
+}
+
+.saveEvent:hover{
+  border: 3px solid #F0D92B ;
 }
 
 .saveImage{
