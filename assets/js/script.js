@@ -32,11 +32,23 @@ var img10 = $('#img10');
 // Do = number of the day
 //Function to display today's date
 function displayTime (){
-    var date = moment().format('MMMM Do YYYY, h:mm a');
-    actualTime.append('<span>'+ date+'</span>');
+
+    var date = document.createElement('span');
+    date.textContent = moment().format('MMMM Do YYYY, h:mm:ss a');
+    actualTime.append(date);
+
+    setInterval(function(){
+        var dateSeconds = moment().format('MMMM Do YYYY, h:mm:ss a');
+        actualTime.html('');
+        actualTime.append(dateSeconds);
+    },1000)
+    
+    
 }
 
 displayTime();
+
+
 
 //Click on image to save event
 img1.on('click', function (event){
@@ -90,7 +102,6 @@ img10.on('click', function (event){
     eventDataHandler10();
 })
 
-
 //VARIBLES TO GET THE USERS INPUT VALUE FROM LOCALSTORAGE
 var getEvent1 = localStorage.getItem('eventSchedule1');
 var getEvent2 = localStorage.getItem('eventSchedule2');
@@ -102,6 +113,8 @@ var getEvent7 = localStorage.getItem('eventSchedule7');
 var getEvent8 = localStorage.getItem('eventSchedule8');
 var getEvent9 = localStorage.getItem('eventSchedule9');
 var getEvent10 = localStorage.getItem('eventSchedule10');
+
+
 
 /************  FUNCTIONS TO STORE THE USERS INPUT AND SET TO LOCALSTORAGE  **************** */
 function eventDataHandler1(){
@@ -143,6 +156,8 @@ function eventDataHandler9(){
 function eventDataHandler10(){
     localStorage.setItem('eventSchedule10', saveEvent10.val());
 }
+
+
 
 //USED LOCALSTORAGE GETITEM TO STORAGE THE EVENT ON THE WEB
 saveEvent1.val(getEvent1);

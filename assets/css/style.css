@@ -83,17 +83,13 @@ textarea {
 .time{
   height: 100%;
   line-height: 80px;
-  border-right: 5px solid #2c81cb;
-  border-top: 2px solid #255761;
+  border-right: 5px solid #2c81cb;  
   padding: 0px;
   font-family: 'Times New Roman', Times, serif;
   font-weight: 600;
   font-size: 16px;
 }
 
-.lastTime{
-  border-bottom: 2px solid #255761 ;
-}
 
 /* STYLES FOR INPUT*/
 .event{
@@ -148,3 +144,8 @@ textarea {
   cursor: pointer;
 }
 
+/* CLASS TO SET MARGIN-BOTTOM*/
+
+.margin-bottom-2{
+  margin-bottom: 0.125rem;
+}
